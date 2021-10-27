@@ -54,7 +54,7 @@ telegram_file = 'telegram.json'
 if os.path.isfile(telegram_file):
     telegram_obs = TelegramObserver.from_config(telegram_file)
     ex.observers.append(telegram_obs)
-fs_observer = FileStorageObserver.create('results-comet-gans')
+fs_observer = FileStorageObserver.create('/mnt/tank/scratch/nduginets/results-comet-gans')
 
 @ex.config
 def cfg():

@@ -16,3 +16,5 @@ CUDA_VISIBLE_DEVICES=$GPU python3 train_comet_csv.py with \
 				train_root=${isic19_root} train_csv=${train_plain_old_clf}/train_${split}.csv epochs=100\
 				val_root=${isic19_root} val_csv=${val_csv} model_name="inceptionv4" exp_desc="Real" exp_name="gans.train_Real.inceptionv4.split${split}"
 done
+
+CUDA_VISIBLE_DEVICES=$GPU python3 train_comet_csv.py  train_root="/mnt/tank/scratch/nduginets" train_csv="nfs/home/nduginets/gan-aug-analysis/splits/percentages/1_0/train_0.csv" epochs=100 val_root="/mnt/tank/scratch/nduginets" val_csv="/nfs/home/nduginets/gan-aug-analysis/splits/isic2019-val.csv" model_name="inceptionv4" exp_desc="Real" exp_name="gans.train_Real.inceptionv4.split0"
